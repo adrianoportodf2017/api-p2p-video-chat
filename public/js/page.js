@@ -8,8 +8,8 @@ function showLoading() {
 function showFail() {
     hidePanel('loading')
     showPanel('fail')
-    hidePanel('connect')
-    hidePanel('players')
+    showPanel('connect')
+    showPanel('players')
 }
 
 function showForm() {
@@ -29,7 +29,7 @@ function showPlayers() {
 function addVideoPlayer(stream) {
     var template = new DOMParser().parseFromString('<div class="col"><div class="videoWrapper card"><video class="responsive-video" autoplay></video></div></div>', 'text/html')
     template.getElementsByTagName('video')[0].srcObject = stream
-    var  divPlayer = template.body.childNodes[0]
+    var divPlayer = template.body.childNodes[0]
     document.getElementById('players-row').appendChild(divPlayer)
     return divPlayer
 }
