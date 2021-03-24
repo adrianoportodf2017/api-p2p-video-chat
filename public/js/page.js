@@ -7,7 +7,7 @@ function showLoading() {
 
 function showFail() {
     hidePanel('loading')
-    showPanel('fail')
+        //showPanel('fail')
     showPanel('connect')
     showPanel('players')
 }
